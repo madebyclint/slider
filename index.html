@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slider</title>
+
+  <style>
+    .slider {
+      width: 50%;
+      position: relative;
+      overflow: hidden;
+      height: 300px;
+      text-align: center;
+      border: 20px solid purple;
+    }
+    .slider > * {
+      width: 80%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transition-property: transform;
+      transition-timing-function: ease-out;
+      transition-duration: 1s;
+      will-change: transform;
+    }
+    .slider > *:nth-child(1) {
+      display: none;
+    }
+    .slider > *:nth-child(2) {
+      transform: translateX(-250%) translateZ(0) translateY(-50%);
+    }
+    .slider > *:nth-child(3) {
+      transform: translateX(-150%) translateZ(0) translateY(-50%);
+    }
+    .slider > *:nth-child(4) {
+      transform: translateX(-50%) translateZ(0) translateY(-50%);
+    }
+    .slider > *:nth-child(5) {
+      transform: translateX(50%) translateZ(0) translateY(-50%);
+    }
+    .slider > *:nth-child(6) {
+      transform: translateX(150%) translateZ(0) translateY(-50%);
+    }
+    .slider > * > img {
+      width: calc(100% - 20px);
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <div>
+      <img src="images/optimized/fer-gomez-716806-unsplash.jpg" />
+    </div>
+    <div>
+      <img src="images/optimized/jezael-melgoza-326121-unsplash.jpg" />
+    </div>
+    <div>
+      <img src="images/optimized/jezael-melgoza-551505-unsplash.jpg" />
+    </div>
+    <!-- <div>
+      <img src="images/natalya-340213-unsplash.jpg" />
+    </div>
+    <div>
+      <img src="images/tania-orozco-732003-unsplash.jpg" />
+    </div>
+    <div>
+      <img src="images/filip-gielda-474479-unsplash.jpg" />
+    </div> -->
+  </div>
+  <button class="next">Next</button>
+  <button class="back">Back</button>
+
+  <script src="slider.js"></script>
+</body>
+</html>
